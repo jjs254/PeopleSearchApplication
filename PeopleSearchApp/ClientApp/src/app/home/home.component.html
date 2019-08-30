@@ -1,0 +1,28 @@
+<div class="jumbotron jumbotron-home">
+  <h1>Search Database</h1>
+</div>
+
+
+<div class="search-container">
+  <input class="form-control" type="search" id="search-bar" placeholder="Start Typing a Name..." (input)="onInputChange($event.target.value)">
+</div>
+<div>
+  <input class="form-check big-checkbox" type="checkbox" id="slowSelector" (click)="onCheckChange($event.target.checked)" /><label for="slowSelector">Simulate Slow Search</label>
+</div>
+
+<div class="surrounding-container" *ngIf="searching">
+  <div class="loader"></div>
+  <p *ngIf="waitingClock > 4">Looks like things are a bit slow. Hold tight!</p>
+</div>
+
+<ul class="peopleList" *ngIf="people">
+  <li class="card-item" *ngFor="let person of people">
+    <person-card [person]="person" [searchString]="searchString"></person-card>
+  </li>
+</ul>
+
+<div class="surrounding-container" *ngIf="searchString != '' && people.length == 0 && !searching">
+  <p><i>No results found</i></p>
+</div>
+
+

@@ -1,0 +1,10 @@
+<div class="card">
+  <img src="{{person.imageUrl}}" alt="Avatar">
+  <div class="info-container">
+    <h4><i><p [innerHtml]="boldSearch()"></p></i></h4>
+    <hr style="border-top:1px solid #000;" />
+    <p><span class='glyphicon glyphicon-home'></span> Address: {{ person.address + ' ' + person.city + ', ' + person.state + ', ' + person.zipcode}}</p>
+    <p><span class='glyphicon glyphicon-hourglass'></span> Age: {{person.age}}</p>
+    <p><span class='glyphicon glyphicon-heart'></span> Interests: {{person.interests}}</p>
+  </div>
+</div>

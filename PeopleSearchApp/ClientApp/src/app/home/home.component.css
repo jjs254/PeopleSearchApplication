@@ -1,0 +1,79 @@
+.search-container {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+input#search-bar {
+  margin: 0 auto;
+  width: 100%;
+  height: 60px;
+  padding: 0 20px;
+  font-size: 4rem;
+  border: 1px solid #D0CFCE;
+  outline: none;
+  &:focus
+  {
+    border: 1px solid #008ABF;
+    transition: 0.35s ease;
+    color: #008ABF;
+    &::-webkit-input-placeholder
+    {
+      transition: opacity 0.45s ease;
+      opacity: 0;
+    }
+
+    &::-moz-placeholder {
+      transition: opacity 0.45s ease;
+      opacity: 0;
+    }
+
+    &:-ms-placeholder {
+      transition: opacity 0.45s ease;
+      opacity: 0;
+    }
+  }
+}
+
+.peopleList {
+  list-style-type: none;
+  padding: 20px;
+}
+
+.card-item {
+  padding: 20px;
+}
+
+.jumbotron-home {
+  background-image: url("../../../../wwwroot/banner.PNG");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.big-checkbox {
+  width: 20px;
+  height: 50px;
+  vertical-align: middle;
+  margin-right: 10px;
+  margin-top: 0px;
+}
+
+.surrounding-container {
+  text-align: center;
+}
+
+.loader {
+  display: inline-block;
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #3498db;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg) }
+}
